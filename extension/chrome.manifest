@@ -1,0 +1,3 @@
+content fireframe chrome/content/fireframe/ xpcnativewrappers=no
+
+overlay chrome://firebug/content/firebugOverlay.xul chrome://fireframe/content/fireframe.xul
