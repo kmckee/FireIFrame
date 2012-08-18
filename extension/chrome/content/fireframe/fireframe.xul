@@ -3,14 +3,16 @@
   <script src="chrome://fireframe/content/fireframe.js" type="application/x-javascript"/>
 
     <commandset id="mainCommandSet">
-      <command id="cmd_hwSelectFrame" oncommand="Firebug.FireFrameModel.onMyButton(Firebug.currentContext)"/>
+      <command id="cmd_hwSelectFrame" oncommand="Firebug.FireFrameModel.onSelectFrame(Firebug.currentContext)"/>
     </commandset>
 
     <vbox id="fbCommandEditorBox">
       <hbox id="fbCommandToolbar">
         <toolbarbutton id="hwSelectFrame"
           label="Select Frame" class="toolbar-text-button"
-          tooltiptext="Select which IFrame the console is attached to." command="cmd_hwSelectFrame" insertafter="fbCommandEditorHistoryButton"/>
+          tooltiptext="Attach console to a different Frame" 
+          command="cmd_hwSelectFrame" 
+          insertafter="fbCommandEditorHistoryButton"/>
       </hbox>
     </vbox>
 

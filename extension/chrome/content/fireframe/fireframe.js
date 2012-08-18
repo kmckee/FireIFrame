@@ -2,7 +2,7 @@ FBL.ns(function() { with (FBL) {
 
   Firebug.FireFrameModel = extend(Firebug.Module,
   {
-    onMyButton: function(context) {
+    onSelectFrame: function(context) {
         alert("hi");
     }
   });
