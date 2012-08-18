@@ -1,4 +1,21 @@
 <?xml version="1.0"?>
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="chrome://fireframe/content/fireframe.js" type="application/x-javascript"/>
+
+
+    <commandset id="mainCommandSet">
+      <command id="cmd_hwSelectFrame" oncommand="Firebug.FireFrameModel.onMyButton(Firebug.currentContext)"/>
+    </commandset>
+
+    <toolbar id="fbToolbar" align="center">
+        <hbox id="fbToolbarInner" insertbefore="fbDetachButton" flex="1" align="center">
+            <hbox id="fbFireFrameButtons" insertafter="fbNetButtons">
+                <toolbarseparator/>
+                <toolbarbutton id="hwSelectFrame"
+                    label="Select Frame" class="toolbar-text-button"
+                    tooltiptext="Push to select what IFrame the console is attached to" command="cmd_hwSelectFrame"/>
+           </hbox>
+       </hbox>
+    </toolbar>
+
 </overlay>
