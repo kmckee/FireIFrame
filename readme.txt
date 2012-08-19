@@ -1,0 +1,1 @@
+FireFrame is a lightweight Firebug extension that adds the ability to visually select an IFrame and attach the console to it, rather than manually calling cd and having to drill down through nested frames.
