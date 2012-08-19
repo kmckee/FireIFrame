@@ -21,8 +21,6 @@ FBL.ns(function() { with (FBL) {
 
     getFrameStackRecursive: function(element, frames)
     {
-      Firebug.Console.log('Frames: ');
-      Firebug.Console.log(frames);
       frames = frames || [];
       if (element)
       {
@@ -47,10 +45,10 @@ FBL.ns(function() { with (FBL) {
     attachConsoleToFrameContaining: function(element, context)
     {
       var frameStack = this.getFrameStackRecursive(element);
-      Firebug.Console.log(frameStack);
       this.walkFrameStack(frameStack, context);
     }, 
 
+    // TODO: Is there a better way to get at this function?  I couldn't find any way through the CommandLineAPI.
     cd: function(object, context)
     {
         if (!(object instanceof window.Window))
