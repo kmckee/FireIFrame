@@ -4,6 +4,7 @@
 
     <commandset id="mainCommandSet">
       <command id="cmd_hwSelectFrame" oncommand="Firebug.FireFrameModel.onSelectFrame(Firebug.currentContext)"/>
+      <command id="cmd_hwAttachTop" oncommand="Firebug.FireFrameModel.onAttachTop(Firebug.currentContext)"/>
     </commandset>
 
     <vbox id="fbCommandEditorBox">
@@ -14,6 +15,12 @@
           tooltiptext="Attach console to a different Frame" 
           command="cmd_hwSelectFrame"
           insertafter="fbFireFrameSeparator"/>
+        <toolbarbutton id="hwAttachToTop"
+          label="Attach to Top" class="toolbar-text-button"
+          tooltiptext="Attaches the console to the top window." 
+          command="cmd_hwAttachTop"
+          insertafter="hwSelectFrame"/>
+
       </hbox>
     </vbox>
 

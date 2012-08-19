@@ -13,6 +13,10 @@ FBL.ns(function() { with (FBL) {
       Firebug.Inspector.startInspecting(context);
       panel.inspectable = false;
     },
+
+    onAttachTop: function (context) {
+      this.cd(top, context);
+    },
     
     getParentFrame: function(element)
     {
