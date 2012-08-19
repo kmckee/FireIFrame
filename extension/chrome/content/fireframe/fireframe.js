@@ -21,11 +21,13 @@ FBL.ns(function() { with (FBL) {
 
     getFrameStackRecursive: function(element, frames)
     {
+      Firebug.Console.log('Frames: ');
+      Firebug.Console.log(frames);
       frames = frames || [];
-      var parent = this.getParentFrame(element);
-      if (parent)
+      if (element)
       {
-          frames.push(parent);
+          frames.push(element);
+          var parent = this.getParentFrame(element);
           this.getFrameStackRecursive(parent, frames);
       }
       return frames;
@@ -44,7 +46,9 @@ FBL.ns(function() { with (FBL) {
 
     attachConsoleToFrameContaining: function(element, context)
     {
-      this.walkFrameStack(this.getFrameStackRecursive(element), context);
+      var frameStack = this.getFrameStackRecursive(element);
+      Firebug.Console.log(frameStack);
+      this.walkFrameStack(frameStack, context);
     }, 
 
     cd: function(object, context)
