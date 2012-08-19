@@ -8,11 +8,12 @@
 
     <vbox id="fbCommandEditorBox">
       <hbox id="fbCommandToolbar">
+        <toolbarseparator id="fbFireFrameSeparator" insertafter="fbCommandEditorHistoryButton"/>
         <toolbarbutton id="hwSelectFrame"
-          label="Select Frame" class="toolbar-text-button"
+          label="Attach to Frame" class="toolbar-text-button"
           tooltiptext="Attach console to a different Frame" 
-          command="cmd_hwSelectFrame" 
-          insertafter="fbCommandEditorHistoryButton"/>
+          command="cmd_hwSelectFrame"
+          insertafter="fbFireFrameSeparator"/>
       </hbox>
     </vbox>
 
