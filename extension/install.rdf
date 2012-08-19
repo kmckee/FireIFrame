@@ -2,7 +2,7 @@
   xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>fireframe@aptobits.com</em:id>
-    <em:version>0.0.1</em:version>
+    <em:version>0.1.0</em:version>
 
     <!-- Firefox -->
     <em:targetApplication>
@@ -16,7 +16,7 @@
 
     <!-- Extension -->
     <em:name>FireFrame</em:name>
-    <em:description>Firebug Frame Switcher Extension</em:description>
+    <em:description>FireFrame is a Firebug extension that allows you to easily attach the console to IFrames within a page by visually selecting the IFrame you wish to attach to.</em:description>
     <em:creator>Kyle McKee</em:creator>
     <em:homepageURL>http://www.aptobits.com</em:homepageURL>
   </Description>
